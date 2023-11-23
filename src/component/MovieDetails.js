@@ -111,13 +111,6 @@ function MovieDetails() {
 
             </Grid>
         </div>
-
-
-
-
-
-
-
     )
 }
 
