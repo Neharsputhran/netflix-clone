@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
 
 const customStyles = {
   content: {
@@ -14,34 +14,32 @@ const customStyles = {
   },
 };
 
-// Choose a root element for your entire React application (e.g., a div with id="root").
 Modal.setAppElement('#root');
 
 function Trailer({ location, movieId }) {
-  const [trailerView, setTrailerView] = useState([]);
+  const [trailerView, setTrailerView] = useState({});
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const showTrailer = () => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${movieId ? movieId : location?.state?.movie?.id}/videos?api_key=eeb4459ec0266f4380d3ade482bf2ea2&language=en-US`
+      `https://api.themoviedb.org/3/movie/${
+        movieId ? movieId : location?.state?.movie?.id
+      }/videos?api_key=eeb4459ec0266f4380d3ade482bf2ea2&language=en-US`
     )
       .then((res) => res.json())
-      .then((json) => setTrailerView(json[0]?.results));
+      .then((json) => setTrailerView(json.results[0])); // Assuming you want the first video in the results
   };
 
   useEffect(() => {
     showTrailer();
   }, []);
 
-  let subtitle;
-
   function openModal() {
     setIsOpen(true);
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    // Any additional logic after opening the modal
   }
 
   function closeModal() {
@@ -65,13 +63,14 @@ function Trailer({ location, movieId }) {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
-        {/* <button onClick={closeModal}>close</button> */}
-        <YouTube
-  videoId={trailerView?.key}
-  opts={{ origin: window.location.origin }}
-/>
-
+        {/* <h2>{trailerView?.name}</h2> */}
+        <ReactPlayer
+          url={`https://www.youtube.com/watch?v=${trailerView?.key}`}
+          height='400px'
+          width='600px'
+          controls={true}
+          className='bg-dark overflow-hidden'
+        />
       </Modal>
     </div>
   );
