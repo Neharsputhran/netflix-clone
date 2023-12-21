@@ -76,7 +76,7 @@ function MovieDetails() {
 
                             <h3 style={{ textAlign: "left", color: "white", fontWeight: "100" }}>{location.state.movie?.overview}</h3>
                             {/* <Button variant='contained' style={{color:"black",backgroundColor:"white"}}>Play Trailer</Button> */}
-                            <Trailer location={location} />
+                            <Trailer location={location} movieId={location.state.movie.id}/>
 
                         </div>
 
