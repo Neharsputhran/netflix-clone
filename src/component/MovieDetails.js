@@ -33,8 +33,10 @@ function MovieDetails() {
                 theme: "dark"
             })
                 : toast.warn("Please Sign In")
-        } catch (err) {
-            console.error(err);
+
+        } 
+        catch (error) {
+            console.error(error)
         }
 
     }
