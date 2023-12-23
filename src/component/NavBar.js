@@ -10,6 +10,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Trailer from './Trailer';
 
+import './css/NavBar.css';
+
+
 function NavBar() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [movies, setMovies] = useState([]);
@@ -79,7 +82,7 @@ function NavBar() {
         </div>
       </div>
       <div style={{ padding: '20px', display: 'flex', flexDirection: 'column' }}>
-  <h1 style={{ color: '#f1f1f1', fontSize: '70px', textAlign: 'left', fontFamily: 'initial' }}>
+  <h1 className="Title" >
     {movies[3]?.original_title}
   </h1>
   <h3 style={{ color: '#f1f1f1', textAlign: 'left', fontWeight: 'normal' }}>{movies[3]?.overview}</h3>

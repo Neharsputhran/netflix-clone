@@ -1,0 +1,14 @@
+.reactPlay {
+   
+    height: 400px;
+    width: 600px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .reactPlay {
+        margin: auto;
+      width: 100%;
+      height: 200px;
+    }
+  }
+  

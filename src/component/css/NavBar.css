@@ -1,0 +1,19 @@
+.Title {
+    font-size: 70px;
+    color: #f1f1f1;
+    text-align: left;
+    font-family: initial;
+}
+@media(max-width:770px){
+    .Title{
+        font-size: 50px;
+       
+    }
+}
+@media(max-width:480px){
+    .Title{
+        font-size: 45px;
+       
+    }
+
+}

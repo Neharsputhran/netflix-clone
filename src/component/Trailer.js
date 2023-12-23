@@ -2,8 +2,7 @@ import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import ReactPlayer from 'react-player';
-
-
+import './css/Trailer.css';
 
 const customStyles = {
   content: {
@@ -94,13 +93,16 @@ function Trailer({ location, movieId }) {
         {errorMessage ? (
           <p>{errorMessage}</p>
         ) : (
-          <ReactPlayer
+          <div className='reactPlay'>
+            <ReactPlayer 
             url={trailerView?.key ? `https://www.youtube.com/watch?v=${trailerView.key}` : ''}
-            height='400px'
-            width='600px'
+            height='100%'
+            width='100%'
             controls={true}
             className='bg-dark overflow-hidden'
           />
+          </div>
+          
         )}
       </Modal>
     </div>
