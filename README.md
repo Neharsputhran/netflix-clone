@@ -8,8 +8,6 @@ Welcome to the Netflix Clone Web Application! This project is a clone of the pop
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - User authentication (Sign up, Login, Logout)
