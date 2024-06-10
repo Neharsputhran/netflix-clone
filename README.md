@@ -2,6 +2,9 @@
 
 Welcome to the Netflix Clone Web Application! This project is a clone of the popular streaming service, Netflix, and showcases various features such as browsing movies and TV shows, viewing details, and more. It is built using modern web technologies and is deployed on Vercel.
 
+---
+![Screenshot 2024-02-08 222002](https://github.com/Neharsputhran/netflix-clone/assets/109666034/f274ba5f-a7cf-4804-905b-7a3991ce56de)
+---
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
