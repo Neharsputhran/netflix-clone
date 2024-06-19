@@ -1,3 +1,7 @@
+Certainly! Here is the corrected README with the license section properly placed outside the folder structure section:
+
+---
+
 # Netflix Clone Web Application
 
 Welcome to the Netflix Clone Web Application! This project is a clone of the popular streaming service, Netflix, and showcases various features such as browsing movies and TV shows, viewing details, and more. It is built using modern web technologies and is deployed on Vercel.
@@ -11,6 +15,7 @@ Welcome to the Netflix Clone Web Application! This project is a clone of the pop
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
+- [License](#license)
 
 ## Features
 - User authentication (Sign up, Login, Logout)
@@ -95,6 +100,10 @@ netflix-clone/
 │   ├── index.js          # Entry point for the React application
 │
 └── README.md             # Readme file
+```
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
