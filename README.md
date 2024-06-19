@@ -1,5 +1,3 @@
-Certainly! Here is the corrected README with the license section properly placed outside the folder structure section:
-
 ---
 
 # Netflix Clone Web Application
